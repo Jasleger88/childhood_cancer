@@ -1,15 +1,27 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Login from './components/Login.jsx';
+import Navbar from './components/Navbar.Jsx';
+import Home from './components/Home.Jsx';
+// import 'bulma/css/bulma.min.css'; // Importing Bulma CSS
 
-const App = () => {
+function App() {
   return (
-    <h1>Strength In Numbers
-      ParentCare Circle
-    </h1>
- 
-  )
+    <Router>
+      <Navbar />
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/login" element={<Login />} />
+
+      </Routes>
+
+
+    </Router>
+  );
 }
 
-export default App
+export default App;
+
+
+
