@@ -24,7 +24,8 @@ const Navbar = () => {
 
     return (
         <div className="navbar">
-            {!isLoggedIn && <Link to="/login" className="button is-warning">Greetings, Login</Link>}
+            { <Link to="/" className="button is-warning">Home Page</Link>}
+            {<Link to="/login" className="button is-warning">Greetings, Login</Link>}
         </div>
     );
 };
